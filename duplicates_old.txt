@@ -1,0 +1,872 @@
+Duplicates (hash: 4edc7be9e4d4c715b97b3a501bbdab88):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_muhyou_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_muhyou_b1_0.png
+
+Duplicates (hash: 40c35c7036ff62da9d270430e6911c66):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_yowaki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha3a_yowaki_0.png
+
+Duplicates (hash: 68431185234b610ea259e53bfd164492):
+/home/figamin/Documents/higurandomizer/finallyold/si3_tokui_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/si3_tokui_a1_2.png
+
+Duplicates (hash: 86d723522cfe9aa00e67bd34c4959e88):
+/home/figamin/Documents/higurandomizer/finallyold/me3_wink_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_wink_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_wink_a1_2.png
+
+Duplicates (hash: db00002da86d1dd475731f3d014ad262):
+/home/figamin/Documents/higurandomizer/finallyold/kei2_nayamu_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kei2_nayamu_2.png
+
+Duplicates (hash: c16200547ce1a1375333a1ff40d07c61):
+/home/figamin/Documents/higurandomizer/finallyold/si1a_tokui_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_tokui_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_tokui_a1_2.png
+
+Duplicates (hash: 52d26862f8db62d28ccdc0abe7ec759f):
+/home/figamin/Documents/higurandomizer/finallyold/si3_huteki_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/si3_huteki_a1_2.png
+
+Duplicates (hash: e9ef1befa1b94b287df9305868dd5cd5):
+/home/figamin/Documents/higurandomizer/finallyold/si1a_yowaki_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_yowaki_a1_2.png
+
+Duplicates (hash: cb43e048e9431dc8533c99a85592959a):
+/home/figamin/Documents/higurandomizer/finallyold/iri3_majime_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri3_majime_2.png
+
+Duplicates (hash: 39c08a4143e454551de0a17ba2afc826):
+/home/figamin/Documents/higurandomizer/finallyold/renasen1_ikakaku_0.png
+/home/figamin/Documents/higurandomizer/finallyold/renasen2_ikakaku_0.png
+
+Duplicates (hash: 8704d1ea15cf4cab48cab66b04fd8bdd):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_def2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_sakebi_0.png
+
+Duplicates (hash: 2543edfdf9e0a7e8c6bbd79f76af56bb):
+/home/figamin/Documents/higurandomizer/finallyold/me2_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_akuwarai_a1_1.png
+
+Duplicates (hash: 380e1531a372b1076a9d426c5cf3c887):
+/home/figamin/Documents/higurandomizer/finallyold/me2_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_warai_a1_1.png
+
+Duplicates (hash: b035d43663ab3ee6a76436ad81c7264d):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_warai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_warai_b1_1.png
+
+Duplicates (hash: 65723b72cf7aa09d72be924804a5e28b):
+/home/figamin/Documents/higurandomizer/finallyold/me1a_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_akuwarai_a1_1.png
+
+Duplicates (hash: 484e006dafb1ab60c7e2821f768c81f4):
+/home/figamin/Documents/higurandomizer/finallyold/ri2_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri2_warai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/ri2_warai_a1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/rim_warai_0.png
+
+Duplicates (hash: 456bee20857a323ec9a1639ded77697e):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_def_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_def_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_def_b1_2.png
+
+Duplicates (hash: 629855e331f931c367bd66613fe06cba):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_nande_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_nande_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_nande_a1_2.png
+
+Duplicates (hash: 09deb16b4ad8f835a2b1ad114d4ab0a4):
+/home/figamin/Documents/higurandomizer/finallyold/aks1_sakebi_2.png
+/home/figamin/Documents/higurandomizer/finallyold/aks2_shinken_0.png
+
+Duplicates (hash: f1e2fb54ec5da77198f24a21b3dc3fcf):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_hau_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_hau_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_hau_b1_2.png
+
+Duplicates (hash: 9527518a460f713d1f28822709eb9765):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_naku_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_naku_b1_2.png
+
+Duplicates (hash: 7eb54dd111a8e668392e4f91913346a6):
+/home/figamin/Documents/higurandomizer/finallyold/tie_2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tie_4_0.png
+
+Duplicates (hash: 250b4911b58977e88c5563a2c01c9a63):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_komaru_b2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_komaru_b2_1.png
+
+Duplicates (hash: 987c84fa332bbf754ec35ee4a7826f68):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_akuwarai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_akuwarai_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_akuwarai_b1_2.png
+
+Duplicates (hash: bb73a08ca02407a403111abfc46496d2):
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_5_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_5_1.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_5_2.png
+
+Duplicates (hash: ba35511289d0dff4abde29ea23111a62):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_def_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_def_a1_2.png
+
+Duplicates (hash: 1f40cddd8ac78c8c0075a0da7ed6ef01):
+/home/figamin/Documents/higurandomizer/finallyold/me1a_hau_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_hau_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_hau_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_hau_a1_1.png
+
+Duplicates (hash: fcaf93bd122f352c6d36d0b3a43fdbc0):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_kaii_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_kaii_b1_2.png
+
+Duplicates (hash: d1d339a48b56afec4f938fdc45da8145):
+/home/figamin/Documents/higurandomizer/finallyold/ta1_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_hatena_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_hatena_1.png
+
+Duplicates (hash: 1292b2caaf40328a0fd4f5ce9233c69a):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_hannbeso_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_hannbeso_b1_1.png
+
+Duplicates (hash: 22eb5fafa56f0b0dbd6d0d2302b39398):
+/home/figamin/Documents/higurandomizer/finallyold/ta3_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta3_human_0.png
+
+Duplicates (hash: 46ecdcb17d15e5748b45c824e5ae50f3):
+/home/figamin/Documents/higurandomizer/finallyold/sa3_hannbeso_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa3_hannbeso_a1_1.png
+
+Duplicates (hash: b7b1f0a4a4605f22b9f320d8260a5816):
+/home/figamin/Documents/higurandomizer/finallyold/tetu_2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tetu_2_2.png
+
+Duplicates (hash: 81d52113a6c46024a010dabc5b1c9d64):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_bikkuri_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_bikkuri_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_bikkuri_a1_2.png
+
+Duplicates (hash: 3f8dcabd568a6855ef89b0de2e1603bd):
+/home/figamin/Documents/higurandomizer/finallyold/si3_akuwarai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/si3_akuwarai_a1_2.png
+
+Duplicates (hash: ece9e21bb65b1a06400f33a2bb00deaa):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_hig_okoru_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_hig_okoru_a1_2.png
+
+Duplicates (hash: ebaff17a223ce3f45741b3ab7f6c4cc5):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_odoroki_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_odoroki_a1_2.png
+
+Duplicates (hash: f289d95eb424ce13f68a9b512006412a):
+/home/figamin/Documents/higurandomizer/finallyold/me2_ikari_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_ikari_a1_2.png
+
+Duplicates (hash: a1f292f37b3ed3196d93fb1f6286e703):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_nande_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_nande_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_nande_b1_2.png
+
+Duplicates (hash: 03e403a42e37d8e9a078bbca7d1bb818):
+/home/figamin/Documents/higurandomizer/finallyold/iri2_majime2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri2_majime2_1.png
+
+Duplicates (hash: 586bd94cc65043a1c7ba232fef488f2f):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_yareyare_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_yareyare_a1_1.png
+
+Duplicates (hash: 3c70bbe69c8d64e04b44ae616cbba97e):
+/home/figamin/Documents/higurandomizer/finallyold/sa6_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa6_hau_a1_0.png
+
+Duplicates (hash: f11ee30db39d9cd882f3ca600b40ca17):
+/home/figamin/Documents/higurandomizer/finallyold/re1a_hau_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_hau_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_hau_a1_2.png
+
+Duplicates (hash: a4bd68d35b9f2f3317836d2c46ea1176):
+/home/figamin/Documents/higurandomizer/finallyold/re3b_bikkuri_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re3b_bikkuri_b1_2.png
+
+Duplicates (hash: 5b20fd6850ae97ec7fed3dc2f3b652fb):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_yowaki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_yowaki_a1_1.png
+
+Duplicates (hash: 1232cb547b4b927f455ecb1939b84a4d):
+/home/figamin/Documents/higurandomizer/finallyold/rina_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/rina_warai_2.png
+
+Duplicates (hash: e3b937609f8b733f86eb620a16be5e4f):
+/home/figamin/Documents/higurandomizer/finallyold/kei2_ikari1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kei2_ikari2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/kei2_ikari2_2.png
+
+Duplicates (hash: 98421120bf6d80d8f475eddd01461dfd):
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_4_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_4_1.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_4_2.png
+
+Duplicates (hash: dc2c51a55b2a6bece1fcf3ae87874120):
+/home/figamin/Documents/higurandomizer/finallyold/me2_wink_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_wink_a1_1.png
+
+Duplicates (hash: 25e75ff668f705af6330bdc897087de7):
+/home/figamin/Documents/higurandomizer/finallyold/me1a_tokui_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_tokui_a1_1.png
+
+Duplicates (hash: d17799a7554e18981527b6e15312f80e):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_warai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_warai_a1_2.png
+
+Duplicates (hash: ba28b39127eeba5811d15b73b78b6d22):
+/home/figamin/Documents/higurandomizer/finallyold/me2_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_odoroki_a1_1.png
+
+Duplicates (hash: 5de3ac9ac1c35efdaf123e17658ebce3):
+/home/figamin/Documents/higurandomizer/finallyold/me1a_yowaki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_yowaki_a1_1.png
+
+Duplicates (hash: fcbdd2d6fd360dcea2457912f5acfb28):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_au_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ha3a_au_2.png
+
+Duplicates (hash: 2e9ee8dfc1ca5ccc91bcbba65b74d281):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_warai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_warai_b1_2.png
+
+Duplicates (hash: 2714a6b148dd7d7241aea4a25a91213d):
+/home/figamin/Documents/higurandomizer/finallyold/iri1_def2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri1_def2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/iri1_def2_2.png
+
+Duplicates (hash: 251af24ea3bab17b5e10c391d6bb9623):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_warai_a1_1.png
+
+Duplicates (hash: 960772ed5ea760398001d9b3c249b9fa):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_hannbeso_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_hannbeso_b1_1.png
+
+Duplicates (hash: b56adc76218918447eba9db2391355a6):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_hau_a2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_hau_a2_2.png
+
+Duplicates (hash: 84cf7afc31ffdc11280e900d7e961275):
+/home/figamin/Documents/higurandomizer/finallyold/ri5_niko_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri5_niko_a1_2.png
+
+Duplicates (hash: 1034d16e9dd49c3dcc8f31c4861400cc):
+/home/figamin/Documents/higurandomizer/finallyold/ta1_akuwarai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_akuwarai_1.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_akuwarai_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_human_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_human_1.png
+
+Duplicates (hash: 2e14546683088f127688328f4a797c9e):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_naku_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_naku_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_naku_a1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_naku_b1_0.png
+
+Duplicates (hash: 5e33c2b7a18b4acfe830d7e28c103afc):
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi3_def_0.png
+
+Duplicates (hash: 2623b36cd14cca263012a9274e081848):
+/home/figamin/Documents/higurandomizer/finallyold/ta3_iradachi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta5_human_0.png
+
+Duplicates (hash: e1095482c07b23f9db0519bce18c8bfa):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_akuwarai_a1_1.png
+
+Duplicates (hash: 22f84e51384df592e0f9815d16428e8b):
+/home/figamin/Documents/higurandomizer/finallyold/ta1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_warai_1.png
+/home/figamin/Documents/higurandomizer/finallyold/ta1_warai_2.png
+
+Duplicates (hash: 02a4ab7cdd5254fbcf1e64fd9f684edd):
+/home/figamin/Documents/higurandomizer/finallyold/iri1_majime_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri1_majime_1.png
+/home/figamin/Documents/higurandomizer/finallyold/iri1_majime_2.png
+
+Duplicates (hash: ae6abf295f7027bc5b82cbdb6e985173):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_hau_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_hau_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_hau_a1_2.png
+
+Duplicates (hash: 164d715ed8b59c08f513736380b66a0d):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_yareyare_b2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_yareyare_b2_1.png
+
+Duplicates (hash: 0c4599f1d5780a872f02dd677a9b7e80):
+/home/figamin/Documents/higurandomizer/finallyold/ha1_def2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha1_muhyou_0.png
+
+Duplicates (hash: ed4b690fecba2274b8ecaf03ef1925bc):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_warai_a1_1.png
+
+Duplicates (hash: 823a3d76954b81dc0c59d035f2789e30):
+/home/figamin/Documents/higurandomizer/finallyold/renasen1_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/renasen2_def_0.png
+
+Duplicates (hash: ac0eda5dbad533056888c0224e887b7a):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_odoroki_a1_1.png
+
+Duplicates (hash: 91e42db1c66c0b276abf6234dc50b2eb):
+/home/figamin/Documents/higurandomizer/finallyold/ama_niyari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ama_sakebi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda1a_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda1a_niyari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda1a_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda1a_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda1b_odoroki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda2a_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda2a_niyari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda2a_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda2a_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kameda2b_odoroki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kei6_komaru_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kei6_nayamu_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ki_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ki_komaru_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ki_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kuma_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kuma_komaru_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kuma_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyo1_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyo1_komari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyo1_majime_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyo1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyo3_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyo3_komari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyuki_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyuki_hatena_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyuki_huan_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyuki_kanashimi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyuki_neboke_0.png
+/home/figamin/Documents/higurandomizer/finallyold/miyuki_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_odoroki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_odoroki_1.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_tere_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka1_warai_1.png
+/home/figamin/Documents/higurandomizer/finallyold/oka2_odoroki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka2_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oka2_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oryou_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oryou_sakebi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oryou_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oryou_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_ikari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_kanashimi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_odoroki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_odoroki_1.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_tere_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita1_warai_1.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita2_ikari_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita2_kanashimi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita2_odoroki_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita2_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomita2_warai_0.png
+
+Duplicates (hash: 5e6726de30ff3e7f2ab169ebe02bafb6):
+/home/figamin/Documents/higurandomizer/finallyold/re1a_bikkuri_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_bikkuri_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_bikkuri_a1_2.png
+
+Duplicates (hash: 475f4b48dd4d0c933a70504936ef3d60):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_def_a1_1.png
+
+Duplicates (hash: 281eca44874344057eb6bf6a3303a19a):
+/home/figamin/Documents/higurandomizer/finallyold/sa3_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa3_odoroki_a1_1.png
+
+Duplicates (hash: 9d97c070b2fff6795ad543c50786b07d):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_bikkuri_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_bikkuri_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_bikkuri_b1_2.png
+
+Duplicates (hash: cf98fc04d165eb3064f0c5dcdf056464):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_komaru_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_komaru_b2_0.png
+
+Duplicates (hash: 20c3eb3d52488b5ff22a0ebedecc7fc8):
+/home/figamin/Documents/higurandomizer/finallyold/renasen1_muhyokaku_0.png
+/home/figamin/Documents/higurandomizer/finallyold/renasen2_muhyokaku_0.png
+/home/figamin/Documents/higurandomizer/finallyold/renasen2_tuukaku_0.png
+
+Duplicates (hash: 4f43b8b06a279abe6f8dd7d0ed20f582):
+/home/figamin/Documents/higurandomizer/finallyold/si1a_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_akuwarai_a1_2.png
+
+Duplicates (hash: 9bee83896508f932d99ceddbc72a9f55):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_yareyare_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_yareyare_b1_1.png
+
+Duplicates (hash: 47aec361d9ab64ebf286ae2298e29814):
+/home/figamin/Documents/higurandomizer/finallyold/re1a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_warai_a1_2.png
+
+Duplicates (hash: cdeca8091a2784bc7d8f3463d9ad81dd):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_akuwarai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_akuwarai_a1_2.png
+
+Duplicates (hash: 5b21ddfd973e3fbc91e79f90fca9153c):
+/home/figamin/Documents/higurandomizer/finallyold/me1a_huteki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_huteki_a1_1.png
+
+Duplicates (hash: 518e4c8c40c734ffa6cd4b7ca2894b96):
+/home/figamin/Documents/higurandomizer/finallyold/si2_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si2_akuwarai_a1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/si2_huteki_a1_2.png
+
+Duplicates (hash: 0a134e1f71a3de580cb488cb04591be2):
+/home/figamin/Documents/higurandomizer/finallyold/me2_huteki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_huteki_a1_1.png
+
+Duplicates (hash: f59e044e0902cb49aa1f564932069758):
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_ikari_2.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi3_shinken_2.png
+
+Duplicates (hash: d30318a82aad09ce372fa61b9baf53dd):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_odoroki_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_odoroki_b1_1.png
+
+Duplicates (hash: c76ef4279d83ff4d555de55ce71e0202):
+/home/figamin/Documents/higurandomizer/finallyold/si2_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si2_warai_a1_2.png
+
+Duplicates (hash: 7521abd412a0813ec01f1ded3795138a):
+/home/figamin/Documents/higurandomizer/finallyold/oko2_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oko3_def_0.png
+
+Duplicates (hash: 8d1fac955d8a0cd82af7b0e6b822b222):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_hau_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_hau_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_hau_b1_2.png
+
+Duplicates (hash: 7c87f62e7fd629ef27f5751d16cc485c):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_akuwarai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_akuwarai_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_akuwarai_b1_2.png
+
+Duplicates (hash: 002c51555561612c053b7d4864357638):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_def_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_def_a1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_hau_a2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_hau_a2_2.png
+
+Duplicates (hash: 5618b639ff86f2e1e60f3e636d47a6ff):
+/home/figamin/Documents/higurandomizer/finallyold/re1a_nande_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_nande_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re1a_nande_a1_2.png
+
+Duplicates (hash: 989476ce2c3d1d73085531f9b07a0cb3):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_sakebu_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_sakebu_a1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_sakebu_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_sakebu_b1_2.png
+
+Duplicates (hash: 8c9f8ab460dce739e63b97ec82fdd87d):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_muhyou_a2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_muhyou_a2_2.png
+
+Duplicates (hash: 2308ccfca1b616195c68d97d1b2239fb):
+/home/figamin/Documents/higurandomizer/finallyold/ta2_akuwarai_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ta2_human_0.png
+
+Duplicates (hash: 9ad5aeec99f7658120289b17154e7965):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_tokui_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_tokui_a1_1.png
+
+Duplicates (hash: 892b7860496705d713d0b0d3b1dfa351):
+/home/figamin/Documents/higurandomizer/finallyold/si1a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_warai_a1_2.png
+
+Duplicates (hash: 886dc61ad8eb55b2dc945e03c0cf5927):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_hau_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_hau_a1_2.png
+
+Duplicates (hash: 82ec1b62e9e4d8b476d0926429d10ffb):
+/home/figamin/Documents/higurandomizer/finallyold/sa3_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa3_def_a1_1.png
+
+Duplicates (hash: fd4ce7e9694ad1173ab1ea777b3e8b75):
+/home/figamin/Documents/higurandomizer/finallyold/oisi2_7_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi2_7_2.png
+
+Duplicates (hash: 859b8bf28664f27a5406a3fd5ece78f2):
+/home/figamin/Documents/higurandomizer/finallyold/ri2_komaru_a2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/rim_majime_0.png
+
+Duplicates (hash: 0228b8aa571e333df8ff23bdb7a3d42f):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_hannbeso_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_hannbeso_a1_1.png
+
+Duplicates (hash: a925cc12ec7e329ce2277000c2810db1):
+/home/figamin/Documents/higurandomizer/finallyold/re3a_kaii_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re3a_kaii_a1_2.png
+
+Duplicates (hash: 071e2ed1c5b954ef028752271b223ed9):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_warai_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ha2b_warai_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ha3a_warai_2.png
+
+Duplicates (hash: 81c43ebc7d6bb0e7096438bbffb67778):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_warai_a1_1.png
+
+Duplicates (hash: 3c7f43aef69dc572e855f31075c7a330):
+/home/figamin/Documents/higurandomizer/finallyold/iri3_def2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri3_def2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/iri3_def2_2.png
+
+Duplicates (hash: 63f2177cc7fd065a5576a3e827b1db90):
+/home/figamin/Documents/higurandomizer/finallyold/ri2_komaru_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/rim_komaru_0.png
+
+Duplicates (hash: 4b719386459138f7665d8193fc5f842b):
+/home/figamin/Documents/higurandomizer/finallyold/si1a_wink_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_wink_a1_2.png
+
+Duplicates (hash: 39fd745b0af18632a7342b344ac8deee):
+/home/figamin/Documents/higurandomizer/finallyold/ri1_niko_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri1_niko_a1_2.png
+
+Duplicates (hash: 3220af25a3396647cddb5c90aece0dc3):
+/home/figamin/Documents/higurandomizer/finallyold/re3a_hau_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re3a_hau_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re3a_hau_a1_2.png
+
+Duplicates (hash: e0c6ad5b3b7f38aa2cd1b57dfc35bbb3):
+/home/figamin/Documents/higurandomizer/finallyold/me2_hau_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_hau_a1_2.png
+
+Duplicates (hash: bb1fde18165537f2085fa6917cb4178a):
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_2_2.png
+
+Duplicates (hash: a075fdbfad78da860f120be123f2ab1e):
+/home/figamin/Documents/higurandomizer/finallyold/si3_warai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/si3_warai_a1_2.png
+
+Duplicates (hash: ef62009503c847ac1ad465aafae918bf):
+/home/figamin/Documents/higurandomizer/finallyold/ta3_sakebi_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ta5_iradachi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta5_sakebi_2.png
+
+Duplicates (hash: d6525aa550820eec90cf1705eb7c38b5):
+/home/figamin/Documents/higurandomizer/finallyold/me2_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_def_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_def_a1_2.png
+
+Duplicates (hash: 8822aa41fa528ece592a980964961137):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_nande_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_nande_b1_2.png
+
+Duplicates (hash: 8a1afa9e49fc7c61ca23af138f75a711):
+/home/figamin/Documents/higurandomizer/finallyold/re3a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re3a_warai_a1_2.png
+
+Duplicates (hash: eea57c63d6394afb36cb61b25f65a5c0):
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_komaru_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_komaru_1.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_komaru_2.png
+
+Duplicates (hash: bc048daacfebe938bf7bd18a73b0c044):
+/home/figamin/Documents/higurandomizer/finallyold/chibimion_warai_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_warai_a1_1.png
+
+Duplicates (hash: 8cc3a8c9a56f3356061a15a453f8b977):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_akuwarai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_akuwarai_a1_2.png
+
+Duplicates (hash: 622d9e1723daa4f55e06909803425cc5):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_kaii_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_kaii_b1_2.png
+
+Duplicates (hash: 1630126b4001642498bcffae4aad2d8d):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_akireru_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_akireru_b1_1.png
+
+Duplicates (hash: de237821efed544ca70942edc73784f4):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_def_a1_2.png
+
+Duplicates (hash: e94c7daf8bc3a194fbf2922da030c430):
+/home/figamin/Documents/higurandomizer/finallyold/iri2_def2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri2_def2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/iri2_def2_2.png
+
+Duplicates (hash: 94f60408ce70bf4bcd660d65180d1eb4):
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_warai_1.png
+/home/figamin/Documents/higurandomizer/finallyold/tomi1_warai_2.png
+
+Duplicates (hash: 71858c38a91e3895abab11d1be96661f):
+/home/figamin/Documents/higurandomizer/finallyold/ri2_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/rim_def_0.png
+
+Duplicates (hash: ebefb463a82ea38feff21392d322841a):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_warai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_warai_b1_1.png
+
+Duplicates (hash: 1b82693564a920e403c66c2382d3502f):
+/home/figamin/Documents/higurandomizer/finallyold/me3_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_akuwarai_a1_1.png
+
+Duplicates (hash: 9961e3f9f5599469395b6d6c45816403):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_hannbeso_a3_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_hannbeso_a3_2.png
+
+Duplicates (hash: eb08c7fb018b5af70a2d6d7cdf03963b):
+/home/figamin/Documents/higurandomizer/finallyold/ri5_warai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/ri5_warai_a1_2.png
+
+Duplicates (hash: e51a8ef953a1516af781eadf973f9eb4):
+/home/figamin/Documents/higurandomizer/finallyold/si1b_wink_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si1b_wink_b1_2.png
+
+Duplicates (hash: 4af059c51138ca7e27195713e65830aa):
+/home/figamin/Documents/higurandomizer/finallyold/ta3_akuwarai_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ta5_akuwarai_2.png
+
+Duplicates (hash: 1ba3e00760c127237bce97258f3a66ea):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha2b_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha3a_def_0.png
+
+Duplicates (hash: 118959c91d90564eb88261323cce8d62):
+/home/figamin/Documents/higurandomizer/finallyold/aka_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/aka_sakebi_0.png
+/home/figamin/Documents/higurandomizer/finallyold/aka_warai_0.png
+
+Duplicates (hash: ef64319670693b0822c89b71a118cc8d):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_def_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_def_b1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_hau_b2_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_hau_b2_2.png
+
+Duplicates (hash: e360139f785c7c0ba591f9c5a433f870):
+/home/figamin/Documents/higurandomizer/finallyold/me1a_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_odoroki_a1_1.png
+
+Duplicates (hash: fa3dbb8b36f87cbdb8655126640ff6d3):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_def_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_def_b1_2.png
+
+Duplicates (hash: e3230cd4eee6f68442a81e7088b06484):
+/home/figamin/Documents/higurandomizer/finallyold/ri2_niko_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri2_niko_a1_2.png
+
+Duplicates (hash: ba0b93771245bd516f1303be711d9a78):
+/home/figamin/Documents/higurandomizer/finallyold/me3_huteki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_huteki_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_huteki_a1_2.png
+
+Duplicates (hash: a6bcea7976dc3cf8ca1fad95eb078578):
+/home/figamin/Documents/higurandomizer/finallyold/ri6_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri6_warai_a1_2.png
+
+Duplicates (hash: 1bd9b14c76d68513294708d7d8f16c46):
+/home/figamin/Documents/higurandomizer/finallyold/me2_yowaki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me2_yowaki_a1_1.png
+
+Duplicates (hash: bd23096a1e0500985730a879679850f2):
+/home/figamin/Documents/higurandomizer/finallyold/chibimion_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_def_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_def_a1_1.png
+
+Duplicates (hash: 939097b425b76025c5fd93cef9ba1ee2):
+/home/figamin/Documents/higurandomizer/finallyold/kei1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kei1_warai_2.png
+
+Duplicates (hash: 252b763ee40b61e0dc0bd0d27d43a512):
+/home/figamin/Documents/higurandomizer/finallyold/tie_3_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tie_3_1.png
+/home/figamin/Documents/higurandomizer/finallyold/tie_3_2.png
+
+Duplicates (hash: 195833ac0aa758e869cc3521c502c76e):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_muhyou_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha2b_def2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ha3a_def2_0.png
+
+Duplicates (hash: 874a18fb03d9b684c9323931b8a5810d):
+/home/figamin/Documents/higurandomizer/finallyold/si1a_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_odoroki_a1_2.png
+/home/figamin/Documents/higurandomizer/finallyold/si1a_tohoho_a1_0.png
+
+Duplicates (hash: 44242c25cf4144cdbbbc808a2901c7b3):
+/home/figamin/Documents/higurandomizer/finallyold/tetu_3_0.png
+/home/figamin/Documents/higurandomizer/finallyold/tetu_3_2.png
+
+Duplicates (hash: d9550f8dd5499de6e49e2b8a19630452):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_bikkuri_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_bikkuri_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_bikkuri_b1_2.png
+
+Duplicates (hash: 73b334d545044283f72637ece127838f):
+/home/figamin/Documents/higurandomizer/finallyold/chibimion_shinken_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_majime_a1_0.png
+
+Duplicates (hash: 0f075671e2b1604169530a4db1889b98):
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_odoroki_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_odoroki_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2a_odoroki_a1_2.png
+
+Duplicates (hash: 7bde8a3714c8fd964be4a3c5c6fdcc4a):
+/home/figamin/Documents/higurandomizer/finallyold/ri1_majime_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri1_majime_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/ri1_majime_a1_2.png
+
+Duplicates (hash: 673a91e9582d933805cc2d93c3f51497):
+/home/figamin/Documents/higurandomizer/finallyold/ri2_niyari_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/rim_niyari_0.png
+
+Duplicates (hash: f70f53f4738f15eda6cb2dd29a475d0e):
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_odoroki_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_odoroki_b1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa2b_odoroki_b1_2.png
+
+Duplicates (hash: b2c88bb259f6b29739c803067af74aee):
+/home/figamin/Documents/higurandomizer/finallyold/chibimion_wink_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_wink_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1a_wink_a1_1.png
+
+Duplicates (hash: 788e738bc9d917572667997c58eb3a8e):
+/home/figamin/Documents/higurandomizer/finallyold/me3_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_warai_a1_2.png
+
+Duplicates (hash: 5fa8eed648bd90a95341964b8731357d):
+/home/figamin/Documents/higurandomizer/finallyold/ri1_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri1_warai_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/ri1_warai_a1_2.png
+
+Duplicates (hash: eaf508418fa1f7a559cef4aa4ed2b110):
+/home/figamin/Documents/higurandomizer/finallyold/iri3_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri3_warai_2.png
+
+Duplicates (hash: 2f57858fe524bbe1d17861e4dbe9b6e5):
+/home/figamin/Documents/higurandomizer/finallyold/ri3_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri3_warai_a1_1.png
+
+Duplicates (hash: 1840535d13c9a1229bc63eaf9a31d96b):
+/home/figamin/Documents/higurandomizer/finallyold/sa3_akuwarai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa3_akuwarai_a1_1.png
+
+Duplicates (hash: cba884e8895bd67519a92a43fe92a202):
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_muhyou_b2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1b_muhyou_b2_2.png
+
+Duplicates (hash: 5b52bf98fe36ef413027cb34fe929c71):
+/home/figamin/Documents/higurandomizer/finallyold/me3_tokui_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_tokui_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/me3_tokui_a1_2.png
+
+Duplicates (hash: 44aa5450b86d042574ed5b32ed98ebdc):
+/home/figamin/Documents/higurandomizer/finallyold/ri1_komaru_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ri1_komaru_a2_0.png
+
+Duplicates (hash: 8617ae252ec95cee553a2ddfd8694ec7):
+/home/figamin/Documents/higurandomizer/finallyold/iri2_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri2_warai_2.png
+
+Duplicates (hash: 9e84f3ac5b4233b6c7fd11fb10b5e8d4):
+/home/figamin/Documents/higurandomizer/finallyold/si2_wink_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/si2_wink_a1_2.png
+
+Duplicates (hash: 0c764c1886107eda83929b9a44c74500):
+/home/figamin/Documents/higurandomizer/finallyold/iri1_majime2_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri1_majime2_1.png
+
+Duplicates (hash: 3d3b502843f4976e31065a453634c268):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_okoru_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_okoru_b1_0.png
+
+Duplicates (hash: 37dabf7baf22e2ca69e97633dd2b7e2e):
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_3_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oisi1_3_2.png
+
+Duplicates (hash: bcd0f64683e7293be5bd6f41c809646c):
+/home/figamin/Documents/higurandomizer/finallyold/kei2_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/kei2_warai_2.png
+
+Duplicates (hash: 222d3a695afd5bf3b49fe388e189c93d):
+/home/figamin/Documents/higurandomizer/finallyold/re3b_warai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re3b_warai_b1_2.png
+
+Duplicates (hash: d6fae2a39120483cf6aa11892211b915):
+/home/figamin/Documents/higurandomizer/finallyold/re2b_hig_okoru_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2b_hig_okoru_b1_2.png
+
+Duplicates (hash: c8850d684b566ecffbc06ee8ee703bac):
+/home/figamin/Documents/higurandomizer/finallyold/me1b_wink_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/me1b_wink_a1_1.png
+
+Duplicates (hash: b2de608d54554bcaac100c8ff5ba0773):
+/home/figamin/Documents/higurandomizer/finallyold/re2a_kaii_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re2a_kaii_a1_2.png
+
+Duplicates (hash: 0a93e4355dac0edec417e6eb7d618928):
+/home/figamin/Documents/higurandomizer/finallyold/iri1_warai_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri1_warai_2.png
+
+Duplicates (hash: 135284aff348ceca26cc6d06d3de844e):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_naku_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_naku_a1_2.png
+
+Duplicates (hash: b352fd120f823d50597bca605fdc6650):
+/home/figamin/Documents/higurandomizer/finallyold/sa3_warai_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa3_warai_a1_1.png
+
+Duplicates (hash: 5a357e58916a3dd8830223036ceea05a):
+/home/figamin/Documents/higurandomizer/finallyold/ta2_def_0.png
+/home/figamin/Documents/higurandomizer/finallyold/ta2_hatena_0.png
+
+Duplicates (hash: e03c54f06d53a4eef4a5ff2d14ad9db5):
+/home/figamin/Documents/higurandomizer/finallyold/re1b_warai_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re1b_warai_b1_2.png
+
+Duplicates (hash: 584d332af837a125b67a33bc907a5661):
+/home/figamin/Documents/higurandomizer/finallyold/sa5_hannbeso_a1_1.png
+/home/figamin/Documents/higurandomizer/finallyold/sa5_hannbeso_a3_1.png
+
+Duplicates (hash: 19e90147fc0335af204ed356753e9225):
+/home/figamin/Documents/higurandomizer/finallyold/iri2_majime_0.png
+/home/figamin/Documents/higurandomizer/finallyold/iri2_majime_1.png
+/home/figamin/Documents/higurandomizer/finallyold/iri2_majime_2.png
+
+Duplicates (hash: d028e5d5631a72048d1137c2d119b932):
+/home/figamin/Documents/higurandomizer/finallyold/oko_kumon_0.png
+/home/figamin/Documents/higurandomizer/finallyold/oko_odoroki_0.png
+
+Duplicates (hash: 1e6207088fcd3c1c2a5df1a703b64ef1):
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_hannbeso_a1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/sa1a_hannbeso_a1_1.png
+
+Duplicates (hash: 2b887e3ca70de10d302ac79a331389c4):
+/home/figamin/Documents/higurandomizer/finallyold/re3b_kaii_b1_0.png
+/home/figamin/Documents/higurandomizer/finallyold/re3b_kaii_b1_2.png
+
+Duplicates (hash: d13aa4130368f5de619aee1f4b18a46e):
+/home/figamin/Documents/higurandomizer/finallyold/ha2a_odoroki_2.png
+/home/figamin/Documents/higurandomizer/finallyold/ha3a_odoroki_2.png
+

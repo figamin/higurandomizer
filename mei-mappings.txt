@@ -1,0 +1,438 @@
+
+-------------
+
+KEIICHI:
+
+School -> v001
+Casual -> v002
+Gym -> v003
+Dark Hero -> v004
+Winter -> v005
+Taisho Roman -> v006
+Borg Decker -> v007
+Devil -> v009
+Okinomiya Titans -> v010
+Tiran -> v011
+Wedding -> v012
+Outbreak (School) -> v013
+Cat -> v014
+Dark Awakening (School) -> v015
+Blazer -> v016
+Prince -> v017
+Prisoner -> v018
+Night Pool -> v019
+Hot Spring -> v020
+School Days -> v021
+Camping -> v022
+Circus -> v023
+Detective -> v024
+Knight -> v025
+Card Soldier -> v026
+Chocolate Knight -> v027
+Cooking -> v028
+Adventurer -> v029
+Halloween -> v030
+Swordsman -> v031
+Santa -> v032
+Robe -> v033
+
+-------------
+
+RENA:
+
+School -> v001
+Casual -> v002
+Swimsuit -> v003
+Nata (Casual) -> v004
+Angel Mort -> v005
+Love Chainsaw -> v006
+Winter -> v007
+Towel -> v008
+Santa -> v009
+New Year's -> v010
+Maid -> v011
+Nurse -> v012
+Hatless (Casual) -> v013
+Greatest Thief -> v014
+Outbreak (School) -> v015
+Hello Kitty -> v016
+Gungnir -> v017
+Yukata -> v019
+Clannad -> v020
+Wedding -> v021
+Black Maiden -> v022
+Oiran -> v023
+Mion Cosplay -> v024
+Cat -> v025
+Dark Awakening (Casual) -> v026
+Punishment -> v027
+Princess -> v028
+Summer Bride -> v029
+Child -> v030
+Senran Kagura -> v031
+Night Pool -> v032
+Adult -> v033
+Ikki Tousen -> v034
+Hospital (Adult) -> v035
+Pajamas -> v036
+School Days -> v037
+Tuxedo -> v038
+Tracksuit -> v039
+North High -> v040
+Parade -> v041
+Shrine Maiden -> v042
+Dancer -> v043
+Adult (Casual) -> v044
+Black Dress -> v045
+White Dress -> v046
+Army -> v047
+Summer -> v048
+Spider Girl -> v049
+Dancer 2 -> v050
+Gyaru -> v051
+Vampire -> v052
+Yukata -> v053
+
+-------------
+
+MION:
+
+School -> v001
+Casual -> v002
+Gym -> v003
+Detective -> v004
+Angel Mort -> v005
+Swimsuit -> v006
+Winter -> v007
+Hot Springs -> v008
+Evening Star -> v009
+Honored Doll -> v010
+Cinnamon -> v011
+Ichaival -> v012
+Bunny -> v013
+Outbreak (School) -> v014
+Wedding -> v015
+Magical Winter -> v016
+Rena Disguise -> v017
+Adult -> v018
+Shion Disguise (Casual) -> v019
+Racing -> v020
+Dark Awakening (Casual) -> v021
+Clannad -> v022
+Princess -> v023
+Military -> v024
+Witch of Greed -> v025
+Ninja -> v026
+School Days -> v027
+Circus -> v028
+White Kimono -> v029
+Youkai -> v030
+Yukata -> v031
+Parade -> v032
+Black Dress -> v033
+Magical Library -> v034
+Happy Christmas -> v035
+Shrine Maiden -> v036
+Shion Disguise (Winter) -> v037
+Storyteller -> v038
+Valentine Love -> v039
+Fire Clan's Leader -> v040
+Survival Leader -> v041
+Shion Disguise (School) -> v042
+Snow White -> v043
+
+-------------
+
+SHION:
+
+School -> v001
+Casual -> v002
+Chef -> v003
+Angel Mort -> v004
+Lady Agent -> v005
+Winter -> v006
+Towel -> v007
+Azure Swordswoman -> v008
+Festival Vendor -> v009
+Purin -> v010
+Bunny -> v011
+Summer Splash -> v012
+Outbreak (School) -> v013
+Winter Wonderland -> v014
+Teacher -> v015
+Mion Disguise -> v016
+Racing -> v017
+Blazer -> v018
+Clannad -> v019
+Dark Awakening (Casual) -> v020
+Military -> v021
+Witch of Lust -> v022
+Sexy Santa -> v023
+Chocolate Dress -> v024
+Console Casual -> v025
+Mion Disguise (School) -> v026
+Mion Disguise (Casual) -> v027
+Yukata -> v028
+Ghost Ship -> v029
+Lily Kimono -> v030
+Mion Disguise (Casual/Bloody) -> v031
+Mion Disguise (Winter) -> v032
+Chinese New Year -> v034
+Earth Princess -> v035
+Dancer -> v036
+
+-------------
+
+SATOKO:
+
+School -> v001
+Casual -> v002
+Poolside -> v003
+Angel Mort -> v004
+Sun Wukong -> v005
+Winter -> v006
+Pumpkin Witch -> v007
+Towel -> v008
+Sniper -> v009
+Maid -> v010
+Angel -> v011
+Magical Girl -> v012
+Mad Scientist -> v014
+Teen (School/Winter) -> v015
+Teen (School) -> v016
+Clannad -> v017
+One-Day Bride -> v018
+Witch (Eua) -> v019
+Outbreak (School) -> v020
+Teen (Santa) -> v021
+Teacher -> v022
+Teen (Casual) -> v023
+New Year 2022 -> v024
+Dark Awakening (Casual) -> v025
+Teen (Blazer) -> v026
+Teen (Outbreak School/Winter) -> v027
+Shinto Bride -> v028
+Summer Bride -> v029
+Witch (Casual) -> v030
+Oiran -> v031
+Senran Kagura -> v032
+Teen (Idol) -> v033
+Teen (Halloween Maid) -> v034
+Teen (Ikki Tousen) -> v035
+Teen (New Year's 2023) -> v036
+Casual (GouSotsu Design) -> v037
+Camping -> v038
+Yukata -> v039
+Thief -> v040
+Teen (School 2) -> v041
+Teen (Pajamas) -> v042
+Parade -> v043
+Magical Library -> v044
+Happy Christmas -> v045
+Wind Princess -> v046
+Great Treasure Hunter -> v047
+Dancer -> v048
+Gym -> v049
+
+-------------
+
+RIKA:
+
+School -> v001
+Casual -> v002
+Swimsuit -> v005
+Angel Mort -> v006
+Sanzang -> v007
+Witch of Despair -> v008
+Winter -> v009
+Towel -> v010
+Shrine Maiden -> v011
+Galactic Patrol -> v012
+Dark Wings -> v013
+Magical Girl -> v014
+Tsundere Scientist -> v016
+Teen (School) -> v017
+Wedding -> v018
+Oyashiro (School) -> v019
+Oyashiro (Witch) -> v020
+Teen (Santa) -> v021
+New Year 2022 -> v022
+Chiester Sister -> v023
+Teen (Casual) -> v024
+Teen (Oyashiro) -> v025
+Teen (Blazer) -> v026
+Demon -> v027
+Kanon -> v028
+Teen (Winter) -> v029
+Clannad -> v030
+Summer Wedding -> v031
+Dark Awakening (Casual) -> v032
+Oiran -> v033
+Teen (Idol) -> v034
+Teen (Halloween Maid) -> v035
+Teen (Ikki Tousen) -> v036
+Hot Spring -> v037
+Teen (New Year's 2023) -> v038
+North High -> v039
+Teen (Poolside) -> v040
+Casual (GouSotsu Design) -> v041
+Teen (Pajamas) -> v042
+Parade -> v043
+Sweet Fantasy -> v046
+Water Miko Princess -> v047
+Cute General -> v048
+Watanagashi Festival -> v049
+Illusory Summer -> v050
+Noble Ancient Queen -> v051
+Endless Christmas -> v052
+
+-------------
+
+HANYUU:
+
+School -> v001
+Casual -> v002
+Everyone's Idol -> v005
+Angel Mort -> v006
+Dark Vampire -> v007
+Swimsuit -> v008
+Shrine Maiden -> v009
+Winter -> v010
+Sailor -> v011
+Towel -> v012
+Feathered Queen -> v013
+Fairy -> v015
+Shinju-kyo -> v016
+Yukata -> v017
+Oyashiro (Shrine Maiden) -> v018
+Wedding -> v019
+Black Maiden -> v020
+Magical Girl -> v021
+Kanon -> v022
+Dark Awakening (Casual) -> v023
+Demon -> v024
+Shinto Bride -> v025
+Summer Wedding -> v026
+Senran Kagura -> v027
+Halloween Nurse -> v028
+Pretty Santa -> v029
+Oracle -> v030
+North High -> v031
+Frog Raincoat -> v032
+Parade -> v033
+Post Officer -> v034
+Inexperienced Hunter -> v035
+Dream Summer -> v036
+
+-------------
+
+SATOSHI:
+
+School -> v001
+Baseball -> v002
+SteinsGate Collab -> v003
+Blazer -> v004
+Clannad -> v005
+Clinic -> v006
+Outbreak (School) -> v007
+Yukata -> v009
+One for All -> v010
+Winter -> v011
+
+-------------
+
+OOISHI:
+
+Default -> v001
+Red Devil -> v002
+Long Sleeve (Default) -> v003
+
+-------------
+
+TAKANO:
+
+Casual -> v001
+Nurse -> v002
+Towel -> v003
+Winter -> v004
+40s -> v005
+Racing -> v006
+Outbreak (Military) -> v007
+Dark Awakening (Casual) -> v008
+Chocolate Dress -> v009
+Military -> v010
+Hatless (Military) -> v011
+Ruthless Queen -> v012
+Student Council President -> v013
+Dangerous Swimsuit -> v014
+
+-------------
+
+IRIE:
+
+Doctor -> v001
+Surgeon -> v002
+Baseball -> v003
+Cheerleader -> v004
+
+-------------
+
+CHIE:
+
+Casual -> v001
+Winter -> v002
+Empty Handed (Winter) -> v003
+
+-------------
+
+TOMITAKE:
+
+Casual -> v001
+Winter -> v003
+Army -> v005
+
+-------------
+
+TEPPEI:
+
+Default -> v001
+Dark Awakening (Default) -> v002
+
+-------------
+
+KASAI:
+
+Default -> v001
+
+-------------
+
+AKANE:
+
+Default -> v001
+
+-------------
+
+AKASAKA:
+
+Casual -> v001
+Throwing With Might -> v002
+Game Master -> v003
+PE Teacher of Justice -> v004
+
+-------------
+
+TAMURA:
+
+Default -> v001
+Godly Descent -> v002
+Swimsuit -> v003
+Dark Awakening (Godly Descent) -> v004
+Oracle -> v005
+Happy Christmas -> v006
+Invincible Sailor -> v007
+
+-------------
+
+UNE:
+
+Default -> v001
