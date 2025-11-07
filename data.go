@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"strconv"
 	"strings"
 )
 
@@ -361,7 +360,7 @@ var RawGameSprites = map[string][]string{
 	// ep6
 	"re1a_bikkuri_a1_0": {odoroki_blush_open, spriteSets[0]},
 	"re1a_hau_a1_0": {fuan_blush_open, spriteSets[0]},
-	"re1a_warai_a1_0": {, spriteSets[0]},
+	"re1a_warai_a1_0": {smile_blush_close, spriteSets[0]},
 	// ep7
 	"re1a_hau_a1_2": {fuan_blush_open, spriteSets[0]},
 	"re1a_hig_okoru_a1_2": {sinken_blush_open, spriteSets[0]},
@@ -760,7 +759,7 @@ var RawGameSprites = map[string][]string{
 	"sa2b_akuwarai_b1_2": {futeki_blush_open, spriteSets[1]},
 	"sa2b_def_b1_2": {smile_blush_open, spriteSets[1]},
 	"sa2b_hannbeso_b1_0": {odoroki_blush_open, spriteSets[1]},
-	"sa2b_hau_b2_2": {s	mile_blush_open, spriteSets[1]},
+	"sa2b_hau_b2_2": {smile_blush_open, spriteSets[1]},
 	"sa2b_odoroki_b1_2": {sinken_blush_open, spriteSets[1]},
 	// hou+
 	"sa2b_sakebu_b1_2": {odoroki_open, spriteSets[1]},

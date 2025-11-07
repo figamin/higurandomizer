@@ -1,3 +1,17 @@
+package main
+
+type Outfit struct {
+    Name      string
+    SpriteSet string
+}
+
+type CharacterData struct {
+    DisplayName string
+    OutfitsMei  []Outfit
+    OutfitsAA   []Outfit
+}
+
+var Characters = map[string]CharacterData{
 "keiichi": {
 	DisplayName: "Keiichi",
 	OutfitsMei: []Outfit{
@@ -455,3 +469,4 @@
 	},
 	OutfitsAA: []Outfit{}, // Placeholder for Ace Attorney
 },
+}
