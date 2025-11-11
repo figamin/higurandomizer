@@ -1226,7 +1226,7 @@ var RawGameSprites = map[string][]string{
 	// satoshi 2 - baseball
 	// ep5
 	"sato2_def1_0": {smile_open, spriteSets[1]},
-	"sato2_def2_0": {smile_blush_close, spriteSets[1]},
+	"sato2_def2_0": {smile_close, spriteSets[1]},
 	"sato2_komaru_0": {fuan_open, spriteSets[1]},
 	"sato2_komaru2_0": {fuan_open, spriteSets[1]},
 	"sato2_tukare_0": {fuan_close, spriteSets[1]},
@@ -1437,7 +1437,43 @@ func GetFolder(key string) string {
 	return selected
 }
 
+func ResolveSpritePathWithSelection(key string, selectedVariants map[string]string) string {
+    info, ok := RawGameSprites[key]
+    if !ok {
+        log.Fatalf("[ERROR] Sprite key not found: %s", key)
+    }
+
+    expression := info[0]
+    preferredVariant := getVariantForKey(key, selectedVariants)
+    folder := GetFolder(key)
+
+    log.Printf("[DEBUG] Resolving sprite for key '%s' expression '%s', variant '%s', folder '%s'", key, expression, preferredVariant, folder)
+
+    tryVariants := []string{preferredVariant, "v006", "v005", "v004", "v003", "v002", "v001"}
+
+    seen := make(map[string]bool)
+    for _, v := range tryVariants {
+        if seen[v] {
+            continue
+        }
+        seen[v] = true
+
+        candidate := filepath.Join("sprites", "mei", folder, v, expression+".png")
+        if _, err := os.Stat(candidate); err == nil {
+            log.Printf("[DEBUG] Found sprite: %s", candidate)
+            return candidate
+        }
+    }
+
+    fallback := filepath.Join("sprites", "mei", folder, preferredVariant, expression+".png")
+    log.Printf("[WARNING] No variant found for %s/%s — using fallback: %s", folder, expression, fallback)
+    return fallback
+}
+
+
+
 // Returns the first existing sprite file path while checking fallback variants
+/*
 func ResolveSpritePath(key string) string {
 	info, ok := RawGameSprites[key]
 	if !ok {
@@ -1468,3 +1504,4 @@ func ResolveSpritePath(key string) string {
 	log.Printf("WARNING: No variant found for %s/%s — using fallback: %s", folder, expression, fallback)
 	return fallback
 }
+	*/

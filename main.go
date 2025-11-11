@@ -1,25 +1,61 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"math/rand"
 	"log"
+	"math/rand"
 	"os"
 	"path/filepath"
-	"encoding/json"
+	"strings"
+
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/sqweek/dialog"
 )
+var SelectedVariants map[string]string
 
 type Config struct {
 	GamePath   string            `json:"game_path"`
 	SpritePath string            `json:"sprite_path"`
 	Selections map[string]string `json:"selections"`
 }
+func extractVariant(selection string) string {
+    if selection == "" || strings.ToLower(selection) == "best match" {
+        return ""
+    }
+    return selection
+}
+func getVariantForKey(key string, selectedVariants map[string]string) string {
+    folder := GetFolder(key)
+    log.Printf("[DEBUG] Key: %s, Folder: %s", key, folder)
+
+    sel, ok := selectedVariants[folder]
+    if !ok {
+        log.Printf("[DEBUG] No selection found for folder '%s', falling back to default variant", folder)
+        return RawGameSprites[key][1]
+    }
+
+    log.Printf("[DEBUG] Selection for folder '%s': %s", folder, sel)
+
+    if sel == "" || strings.ToLower(sel) == "best match" {
+        log.Printf("[DEBUG] Selection is empty or Best Match, using default variant: %s", RawGameSprites[key][1])
+        return RawGameSprites[key][1]
+    }
+
+    v := extractVariant(sel)
+    if v == "" {
+        log.Printf("[DEBUG] Could not extract variant from selection, using default variant: %s", RawGameSprites[key][1])
+        return RawGameSprites[key][1]
+    }
+
+    log.Printf("[DEBUG] Using variant from selection: %s", v)
+    return v
+}
+
+
 func loadConfig() Config {
 	file, err := os.Open("config.json")
 	if err != nil {
-		// no config → return defaults
 		return Config{Selections: make(map[string]string)}
 	}
 	defer file.Close()
@@ -28,6 +64,11 @@ func loadConfig() Config {
 	if err := json.NewDecoder(file).Decode(&cfg); err != nil {
 		return Config{Selections: make(map[string]string)}
 	}
+	SelectedVariants = make(map[string]string)
+    for character, selection := range cfg.Selections {
+        SelectedVariants[character] = extractVariant(selection)
+    }
+
 	return cfg
 }
 
@@ -40,7 +81,7 @@ func saveConfig(cfg Config) {
 	defer f.Close()
 
 	enc := json.NewEncoder(f)
-	enc.SetIndent("", "  ") // pretty-print
+	enc.SetIndent("", "  ")
 	enc.Encode(cfg)
 }
 
@@ -79,7 +120,6 @@ type model struct {
 	selections map[string]string // new: character → selected option
 }
 
-// cursor helper
 func cursor(cur, i int) string {
 	if cur == i {
 		return ">"
@@ -87,7 +127,6 @@ func cursor(cur, i int) string {
 	return " "
 }
 
-// loadMeiOptions builds the options for a character
 func loadMeiOptions(charKey string) []string {
 	data, ok := Characters[charKey]
 	if !ok {
@@ -110,7 +149,6 @@ func loadMeiOptions(charKey string) []string {
 func initialModel() model {
 	cfg := loadConfig()
 
-	// Fill selections with defaults where missing
 	if cfg.Selections == nil {
 		cfg.Selections = make(map[string]string)
 	}
@@ -157,9 +195,9 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.quitting = true
 				return m, tea.Quit
 			case "up", "k":
-				m.move(4, true)
+				m.move(6, true)
 			case "down", "j":
-				m.move(4, false)
+				m.move(6, false)
 			case "enter", " ":
 				switch m.cursor {
 				case 0:
@@ -200,6 +238,10 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					m.currentMenu = checkSelectionsMenu
 					m.cursor = 0
 				case 3:
+					return m.randomizeSprites()
+				case 4:
+    				return m.restoreOriginalSprites()
+				case 5:
 					m.quitting = true
 					return m, tea.Quit
 				}
@@ -293,9 +335,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					m.cursor = 0
 				}
 			case "enter", " ":
-				//log.Printf("Mei options length 2 = %d\n", len(m.meiOptions))
 				if len(m.meiOptions) == 0 {
-					break // safety check
+					break
 				}
 				if m.page*itemsPerPage >= len(m.meiOptions) {
 					m.page = len(m.meiOptions) / itemsPerPage
@@ -310,48 +351,43 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				}
 				chosen := m.meiOptions[idx]
 
-				// Determine variant to use
-				var variant string
-				switch chosen {
-				case "Best Match":
-					variant = spriteSets[0]
-				case "Random Outfits":
-					data := Characters[m.selectedCharacter]
-					if len(data.OutfitsMei) > 0 {
-						o := data.OutfitsMei[rand.Intn(len(data.OutfitsMei))]
-						chosen = o.Name       // update display name
-						variant = o.SpriteSet // store sprite set
-					} else {
-						variant = spriteSets[0]
-					}
-				case "Random Outfits & Expressions":
-					data := Characters[m.selectedCharacter]
-					if len(data.OutfitsMei) > 0 {
-						o := data.OutfitsMei[rand.Intn(len(data.OutfitsMei))]
-						chosen = o.Name
-						variant = o.SpriteSet
-					} else {
-						variant = spriteSets[0]
-					}
-				default:
-					data := Characters[m.selectedCharacter]
-					for _, o := range data.OutfitsMei {
-						if o.Name == chosen {
-							variant = o.SpriteSet
-							break
-						}
-					}
-				}
+				
+var variant string
+switch chosen {
+case "Best Match":
+    data := Characters[m.selectedCharacter]
+    if len(data.OutfitsMei) > 0 {
+        variant = data.OutfitsMei[0].SpriteSet
+        chosen = data.OutfitsMei[0].Name
+    } else {
+        variant = spriteSets[0]
+    }
+case "Random Outfits", "Random Outfits & Expressions":
+    variant = "" 
+default:
+    data := Characters[m.selectedCharacter]
+    for _, o := range data.OutfitsMei {
+        if o.Name == chosen {
+            variant = o.SpriteSet
+            break
+        }
+    }
+}
 
-				// Save the display name + variant in selections
-				m.selections[m.selectedCharacter] = fmt.Sprintf("%s (variant: %s)", chosen, variant)
-				saveConfig(Config{
-					GamePath:   m.filePath,
-					SpritePath: m.spritePath,
-					Selections: m.selections,
-				})
-				m.message = fmt.Sprintf("Selected %s → Mei → %s", m.selectedCharacter, m.selections[m.selectedCharacter])
-				m.currentMenu = spriteMenu
+if variant != "" {
+    m.selections[m.selectedCharacter] = fmt.Sprintf("%s (variant: %s)", chosen, variant)
+} else {
+    m.selections[m.selectedCharacter] = chosen
+}
+
+saveConfig(Config{
+    GamePath:   m.filePath,
+    SpritePath: m.spritePath,
+    Selections: m.selections,
+})
+m.message = fmt.Sprintf("Selected %s → Mei → %s", m.selectedCharacter, m.selections[m.selectedCharacter])
+m.currentMenu = spriteMenu
+
 			}
 		case checkSelectionsMenu:
     total := len(spriteChoices)
@@ -388,6 +424,147 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
+func (m model) randomizeSprites() (tea.Model, tea.Cmd) {
+    if m.spritePath == "" {
+        m.message = "Select a game first."
+        return m, nil
+    }
+
+    spriteDir := m.spritePath
+    backupDir := filepath.Join(filepath.Dir(spriteDir), "sprite_backup")
+
+    if _, err := os.Stat(backupDir); os.IsNotExist(err) {
+        log.Println("Creating backup at:", backupDir)
+        filepath.Walk(spriteDir, func(path string, info os.FileInfo, err error) error {
+            if err != nil {
+                return nil
+            }
+            if !info.IsDir() && filepath.Ext(path) == ".png" {
+                rel, _ := filepath.Rel(spriteDir, path)
+                dst := filepath.Join(backupDir, rel)
+                os.MkdirAll(filepath.Dir(dst), 0755)
+                data, _ := os.ReadFile(path)
+                os.WriteFile(dst, data, 0644)
+            }
+            return nil
+        })
+    }
+
+for key := range RawGameSprites {
+    dst := filepath.Join(spriteDir, key+".png")
+    if _, err := os.Stat(dst); err != nil {
+        continue 
+    }
+
+    folder := GetFolder(key)
+    selection := m.selections[folder]
+
+    var chosenVariant string
+    var chosenExpression string
+
+    switch selection {
+    case "Random Outfits":
+        data := Characters[folder]
+        if len(data.OutfitsMei) > 0 {
+            o := data.OutfitsMei[rand.Intn(len(data.OutfitsMei))]
+            chosenVariant = o.SpriteSet
+            chosenExpression = RawGameSprites[key][0] // preserve the original expression
+        } else {
+            chosenVariant = spriteSets[0]
+            chosenExpression = RawGameSprites[key][0]
+        }
+    case "Random Outfits & Expressions":
+        data := Characters[folder]
+        if len(data.OutfitsMei) > 0 {
+            o := data.OutfitsMei[rand.Intn(len(data.OutfitsMei))]
+            chosenVariant = o.SpriteSet
+
+            variantFolder := filepath.Join("sprites", "mei", folder, chosenVariant)
+            files, err := os.ReadDir(variantFolder)
+            if err != nil || len(files) == 0 {
+                chosenExpression = RawGameSprites[key][0] // fallback
+            } else {
+                pngFiles := []string{}
+                for _, f := range files {
+                    if !f.IsDir() && filepath.Ext(f.Name()) == ".png" {
+                        pngFiles = append(pngFiles, strings.TrimSuffix(f.Name(), ".png"))
+                    }
+                }
+                if len(pngFiles) > 0 {
+                    chosenExpression = pngFiles[rand.Intn(len(pngFiles))]
+                } else {
+                    chosenExpression = RawGameSprites[key][0]
+                }
+            }
+        } else {
+            chosenVariant = spriteSets[0]
+            chosenExpression = RawGameSprites[key][0]
+        }
+    default:
+        if start := strings.LastIndex(selection, "(variant: "); start != -1 {
+            end := strings.Index(selection[start:], ")")
+            if end != -1 {
+                chosenVariant = selection[start+10 : start+end]
+            }
+        }
+        if chosenVariant == "" {
+            chosenVariant = spriteSets[0]
+        }
+        chosenExpression = RawGameSprites[key][0]
+    }
+
+    src := filepath.Join("sprites", "mei", folder, chosenVariant, chosenExpression+".png")
+    data, err := os.ReadFile(src)
+    if err != nil {
+        log.Printf("Could not read Mei sprite: %s", src)
+        continue
+    }
+
+    err = os.WriteFile(dst, data, 0644)
+    if err != nil {
+        log.Printf("Could not write sprite: %s", dst)
+        continue
+    }
+
+    log.Printf("Replaced: %s → %s (variant: %s, expression: %s)", key, dst, chosenVariant, chosenExpression)
+}
+
+
+    m.message = "Sprites randomized successfully."
+    return m, nil
+}
+
+
+func (m model) restoreOriginalSprites() (tea.Model, tea.Cmd) {
+    if m.spritePath == "" {
+        m.message = "Select a game first."
+        return m, nil
+    }
+
+    spriteDir := m.spritePath
+    backupDir := filepath.Join(filepath.Dir(spriteDir), "sprite_backup")
+
+    if _, err := os.Stat(backupDir); os.IsNotExist(err) {
+        m.message = "No backup found. You must randomize once before restoring."
+        return m, nil
+    }
+
+    filepath.Walk(backupDir, func(path string, info os.FileInfo, err error) error {
+        if err != nil { return nil }
+        if !info.IsDir() && filepath.Ext(path) == ".png" {
+            rel, _ := filepath.Rel(backupDir, path)
+            dst := filepath.Join(spriteDir, rel)
+            os.MkdirAll(filepath.Dir(dst), 0755)
+            data, _ := os.ReadFile(path)
+            os.WriteFile(dst, data, 0644)
+        }
+        return nil
+    })
+
+    m.message = "Original sprites restored successfully."
+    return m, nil
+}
+
 func (m model) View() string {
 	if m.quitting {
 		return "Goodbye!\n"
@@ -396,12 +573,14 @@ func (m model) View() string {
 	switch m.currentMenu {
 	case mainMenu:
 		return fmt.Sprintf(
-			"Main Menu\n\n%s Select Game\n%s Select Sprites\n%s Check Selections\n%s Exit\n\n%s\n",
-			cursor(m.cursor, 0), cursor(m.cursor, 1), cursor(m.cursor, 2), cursor(m.cursor, 3), m.message,
+			"Main Menu\n\n%s Select Game\n%s Select Sprites\n%s Check Selections\n%s Randomize\n%s Restore Original Sprites\n%s Exit\n\n%s\n",
+			cursor(m.cursor, 0), cursor(m.cursor, 1), cursor(m.cursor, 2), cursor(m.cursor, 3), cursor(m.cursor, 4), cursor(m.cursor, 5),
+			m.message,
 		)
 
+
+
 	case spriteMenu:
-		// Ensure page is within valid range for spriteChoices
 		if len(spriteChoices) == 0 {
 			return "No characters available.\n"
 		}
@@ -419,7 +598,6 @@ func (m model) View() string {
 			end = len(spriteChoices)
 		}
 
-		// Correct cursor so it never points outside the visible slice
 		visibleCount := end - start
 		if m.cursor < 0 {
 			m.cursor = 0
@@ -440,7 +618,6 @@ func (m model) View() string {
 			m.selectedCharacter, cursor(m.cursor, 0), cursor(m.cursor, 1),
 		)
 	case meiVariantMenu:
-		//log.Printf("Mei options length 3 = %d\n", len(m.meiOptions))
 		if len(m.meiOptions) == 0 {
 			return "No options available.\n"
 		}
@@ -485,16 +662,6 @@ func (m model) View() string {
 }
 
 func main() {
-	// Create or append to debug log file
-/*
-logFile, err := os.OpenFile("debug.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
-if err != nil {
-    panic(err)
-}
-log.SetOutput(logFile)
-log.SetFlags(log.LstdFlags | log.Lshortfile) // Include date/time + file/line number
-*/
-
 	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {
 		fmt.Println("Error:", err)
