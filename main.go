@@ -1,12 +1,17 @@
 package main
 
 import (
+	"archive/zip"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"math/rand"
+	"net/http"
 	"os"
 	"path/filepath"
+	"runtime"
+	"strconv"
 	"strings"
 
 	tea "github.com/charmbracelet/bubbletea"
@@ -19,6 +24,106 @@ type Config struct {
 	SpritePath string            `json:"sprite_path"`
 	Selections map[string]string `json:"selections"`
 }
+func ensureSprites() {
+	spritesDir := "sprites"
+	meiDir := filepath.Join(spritesDir, "mei")
+	if _, err := os.Stat(spritesDir); os.IsNotExist(err) {
+		log.Println("[INFO] 'sprites' folder not found, downloading ZIPs...")
+
+		// List of ZIP URLs to download
+		urls := []string{
+			"https://github.com/figamin/higurandomizer-assets/releases/download/mei1/mei_part_1.zip",
+			"https://github.com/figamin/higurandomizer-assets/releases/download/mei1/mei_part_2.zip",
+			"https://github.com/figamin/higurandomizer-assets/releases/download/mei1/mei_part_3.zip",
+		}
+
+		// Temporary folder to hold ZIPs
+		tmpDir := "tmp_sprites_download"
+		os.MkdirAll(tmpDir, os.ModePerm)
+		defer os.RemoveAll(tmpDir) // cleanup
+
+		os.MkdirAll(meiDir, os.ModePerm)
+
+		for i, url := range urls {
+			tmpFile := filepath.Join(tmpDir, "sprites_part_"+strconv.Itoa(i)+".zip")
+			log.Printf("[INFO] Downloading %s ...\n", url)
+
+			out, err := os.Create(tmpFile)
+			if err != nil {
+				log.Fatalf("Failed to create temp file: %v", err)
+			}
+
+			resp, err := http.Get(url)
+			if err != nil {
+				log.Fatalf("Failed to download %s: %v", url, err)
+			}
+			if resp.StatusCode != http.StatusOK {
+				log.Fatalf("Failed to download %s: server returned %d", url, resp.StatusCode)
+			}
+
+			_, err = io.Copy(out, resp.Body)
+			out.Close()
+			resp.Body.Close()
+			if err != nil {
+				log.Fatalf("Failed to save %s: %v", url, err)
+			}
+
+			if err := unzip(tmpFile, meiDir); err != nil {
+				log.Fatalf("Failed to extract %s: %v", tmpFile, err)
+			}
+
+			log.Printf("[INFO] Extracted %s", url)
+		}
+
+		log.Println("[INFO] All sprites downloaded and merged successfully.")
+	} else {
+		log.Println("[INFO] 'sprites' folder exists")
+	}
+}
+
+// unzip extracts a ZIP file into a destination folder
+func unzip(src, dest string) error {
+	r, err := zip.OpenReader(src)
+	if err != nil {
+		return err
+	}
+	defer r.Close()
+
+	for _, f := range r.File {
+		fpath := filepath.Join(dest, f.Name)
+		if f.FileInfo().IsDir() {
+			os.MkdirAll(fpath, os.ModePerm)
+			continue
+		}
+
+		if err := os.MkdirAll(filepath.Dir(fpath), os.ModePerm); err != nil {
+			return err
+		}
+
+		outFile, err := os.OpenFile(fpath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, f.Mode())
+		if err != nil {
+			return err
+		}
+
+		rc, err := f.Open()
+		if err != nil {
+			outFile.Close()
+			return err
+		}
+
+		_, err = io.Copy(outFile, rc)
+
+		outFile.Close()
+		rc.Close()
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+
 func extractVariant(selection string) string {
     if selection == "" || strings.ToLower(selection) == "best match" {
         return ""
@@ -89,6 +194,7 @@ type menu int
 
 const (
 	mainMenu menu = iota
+	episodeMenu
 	spriteMenu
 	characterMenu
 	meiVariantMenu
@@ -110,6 +216,7 @@ type model struct {
 	cursor            int
 	page              int
 	selectedCharacter string
+	selectedEpisode	  HigurashiEpisode
 
 	filePath   string
 	spritePath string
@@ -117,9 +224,54 @@ type model struct {
 	quitting   bool
 	meiOptions []string
 
-	selections map[string]string // new: character → selected option
+	selections map[string]string 
+}
+type HigurashiEpisode int
+
+const (
+	Ep01 HigurashiEpisode = iota + 1
+	Ep02
+	Ep03
+	Ep04
+	Ep05
+	Ep06
+	Ep07
+	Ep08
+	Ep09
+	Ep10
+)
+
+func (e HigurashiEpisode) ExeName() string {
+	return fmt.Sprintf("HigurashiEp%02d", e)
+}
+func (e HigurashiEpisode) Label() string {
+	switch e {
+	case Ep01:
+		return "Episode 1 — Onikakushi"
+	case Ep02:
+		return "Episode 2 — Watanagashi"
+	case Ep03:
+		return "Episode 3 — Tatarigoroshi"
+	case Ep04:
+		return "Episode 4 — Himatsubushi"
+	case Ep05:
+		return "Episode 5 — Meakashi"
+	case Ep06:
+		return "Episode 6 — Tsumihoroboshi"
+	case Ep07:
+		return "Episode 7 — Minagoroshi"
+	case Ep08:
+		return "Episode 8 — Matsuribayashi"
+	case Ep09:
+		return "Episode 9 — Higurashi Rei"
+	case Ep10:
+		return "Episode 10 — Higurashi Hou+"
+	default:
+		return string(e)
+	}
 }
 
+ 
 func cursor(cur, i int) string {
 	if cur == i {
 		return ">"
@@ -201,35 +353,9 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			case "enter", " ":
 				switch m.cursor {
 				case 0:
-					path, err := dialog.File().
-						Title("Select Higurashi Episode (Ep01–Ep03)").
-						Filter("Higurashi Episodes", "exe").
-						Load()
-					if err != nil {
-						m.message = "No file selected or error occurred."
-						return m, nil
-					}
-					base := filepath.Base(path)
-					allowed := map[string]bool{
-						"HigurashiEp01.exe": true,
-						"HigurashiEp02.exe": true,
-						"HigurashiEp03.exe": true,
-					}
-					if !allowed[base] {
-						m.message = fmt.Sprintf("Invalid file selected: %s", base)
-						return m, nil
-					}
-					m.filePath = path
-					dir := filepath.Dir(path)
-					dataFolder := filepath.Join(dir, base[:len(base)-4]+"_Data")
-					m.spritePath = filepath.Join(dataFolder, "StreamingAssets", "CGAlt", "sprite")
-					saveConfig(Config{
-						GamePath:   m.filePath,
-						SpritePath: m.spritePath,
-						Selections: m.selections,
-					})
-
-					m.message = "Game selected."
+					m.currentMenu = episodeMenu
+    				m.cursor = int(m.selectedEpisode) - 1
+    				return m, nil
 				case 1:
 					m.currentMenu = spriteMenu
 					m.cursor = 0
@@ -246,6 +372,59 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					return m, tea.Quit
 				}
 			}
+		case episodeMenu:
+	switch key {
+	case "q":
+		m.currentMenu = mainMenu
+
+	case "up", "k":
+		m.move(10, true)
+
+	case "down", "j":
+		m.move(10, false)
+
+	case "enter", " ":
+		m.selectedEpisode = HigurashiEpisode(m.cursor + 1)
+
+		// Try autodetect
+		path, err := autodetectHigurashi(m.selectedEpisode)
+		if err != nil {
+			path, err = dialog.File().
+				Title("Select Higurashi executable").
+				Filter("Higurashi Episodes").
+				Load()
+			if err != nil {
+				m.message = "No file selected."
+				m.currentMenu = mainMenu
+				return m, nil
+			}
+		}
+
+		m.filePath = path
+
+		base := filepath.Base(path)
+		dir := filepath.Dir(path)
+		dataFolder := filepath.Join(
+			dir,
+			strings.TrimSuffix(base, filepath.Ext(base))+"_Data",
+		)
+
+		m.spritePath = filepath.Join(
+			dataFolder,
+			"StreamingAssets",
+			"CGAlt",
+			"sprite",
+		)
+
+		saveConfig(Config{
+			GamePath:   m.filePath,
+			SpritePath: m.spritePath,
+			Selections: m.selections,
+		})
+
+		m.message = fmt.Sprintf("Selected %s", m.selectedEpisode.Label())
+		m.currentMenu = mainMenu
+	}
 
 		case spriteMenu:
 			switch key {
@@ -573,7 +752,7 @@ func (m model) View() string {
 	switch m.currentMenu {
 	case mainMenu:
 		return fmt.Sprintf(
-			"Main Menu\n\n%s Select Game\n%s Select Sprites\n%s Check Selections\n%s Randomize\n%s Restore Original Sprites\n%s Exit\n\n%s\n",
+			"Higurandomizer  1.0\nBy figamin\n\n%s Select Game\n%s Select Sprites\n%s Check Selections\n%s Randomize\n%s Restore Original Sprites\n%s Exit\n\n%s\n",
 			cursor(m.cursor, 0), cursor(m.cursor, 1), cursor(m.cursor, 2), cursor(m.cursor, 3), cursor(m.cursor, 4), cursor(m.cursor, 5),
 			m.message,
 		)
@@ -641,6 +820,17 @@ func (m model) View() string {
 			s += fmt.Sprintf("%s %s\n", cursor(m.cursor, i), name)
 		}
 		return s + "\nUse ↑↓ ←→ Enter, q to return.\n"
+	case episodeMenu:
+		s := "Select Episode\n\n"
+		for i := 1; i <= 10; i++ {
+			ep := HigurashiEpisode(i)
+			s += fmt.Sprintf(
+				"%s %s\n",
+				cursor(m.cursor, i-1),
+				ep.Label(),
+			)
+		}
+		return s + "\nUse ↑↓ Enter, q to cancel.\n"
 
 	case checkSelectionsMenu:
 		start := m.page * itemsPerPage
@@ -657,11 +847,131 @@ func (m model) View() string {
 		return s + "\nUse ↑↓ ←→ q to return.\n"
 
 	}
-
+	
 	return ""
+}
+func fileExists(p string) bool {
+	i, err := os.Stat(p)
+	return err == nil && !i.IsDir()
+}
+
+func dirExists(p string) bool {
+	i, err := os.Stat(p)
+	return err == nil && i.IsDir()
+}
+
+func autodetectHigurashi(ep HigurashiEpisode) (string, error) {
+	exeBase := ep.ExeName()
+	folderName := ep.InstallFolderName()
+
+	if folderName == "" {
+		return "", fmt.Errorf("unknown episode %q", ep)
+	}
+
+	for _, root := range possibleGameRoots() {
+		gameDir := filepath.Join(root, folderName)
+
+		info, err := os.Stat(gameDir)
+		if err != nil || !info.IsDir() {
+			continue
+		}
+		if runtime.GOOS == "windows" {
+			exe := filepath.Join(gameDir, exeBase+".exe")
+			if fileExists(exe) {
+				return exe, nil
+			}
+		}
+
+		if runtime.GOOS == "darwin" {
+			app := filepath.Join(gameDir, exeBase+".app")
+			if dirExists(app) {
+				return app, nil
+			}
+		}
+
+		if runtime.GOOS == "linux" {
+			if fileExists(filepath.Join(gameDir, exeBase+".x86")) ||
+				fileExists(filepath.Join(gameDir, exeBase+".x86_64")) ||
+				fileExists(filepath.Join(gameDir, exeBase+".exe")) {
+					return gameDir, nil
+			}
+		}
+	}
+
+	return "", fmt.Errorf(
+		"could not autodetect %s (%s)",
+		exeBase,
+		folderName,
+	)
+}
+
+
+func possibleGameRoots() []string {
+	var roots []string
+
+	switch runtime.GOOS {
+	case "windows":
+		roots = append(roots,
+			os.Getenv("PROGRAMFILES(X86)")+"\\Steam\\steamapps\\common",
+			os.Getenv("PROGRAMFILES")+"\\Steam\\steamapps\\common",
+			"C:\\GOG Games",
+			"C:\\games\\Mangagamer",
+		)
+	case "darwin":
+		roots = append(roots,
+			filepath.Join(os.Getenv("HOME"), "Library/Application Support/Steam/steamapps/common"),
+			"/Applications",
+			filepath.Join(os.Getenv("HOME"), "GOG Games"),
+		)
+	case "linux":
+		roots = append(roots,
+			filepath.Join(os.Getenv("HOME"), ".steam/steam/steamapps/common"),
+			filepath.Join(os.Getenv("HOME"), ".steam/steambeta/steamapps/common"),
+			filepath.Join(os.Getenv("HOME"), ".var/app/com.valvesoftware.Steam/data/Steam/steamapps/common"),
+			filepath.Join(os.Getenv("HOME"), "GOG Games"),
+		)
+	}
+
+	seen := map[string]bool{}
+	var out []string
+	for _, r := range roots {
+		r = filepath.Clean(r)
+		if !seen[r] {
+			seen[r] = true
+			out = append(out, r)
+		}
+	}
+	return out
+}
+func (e HigurashiEpisode) InstallFolderName() string {
+	switch e {
+	case Ep01:
+		return "Higurashi When They Cry"
+	case Ep02:
+		return "Higurashi 02 - Watanagashi"
+	case Ep03:
+		return "Higurashi 03 - Tatarigoroshi"
+	case Ep04:
+		return "Higurashi 04 - Himatsubushi"
+	case Ep05:
+		return "Higurashi When They Cry Hou - Ch. 5 Meakashi"
+	case Ep06:
+		return "Higurashi When They Cry Hou - Ch.6 Tsumihoroboshi"
+	case Ep07:
+		return "Higurashi When They Cry Hou - Ch.7 Minagoroshi"
+	case Ep08:
+		return "Higurashi When They Cry Hou - Ch.8 Matsuribayashi"
+	case Ep09:
+		return "Higurashi When They Cry Hou - Rei"
+	case Ep10:
+		return "Higurashi When They Cry Hou+"
+	default:
+		return ""
+	}
 }
 
 func main() {
+	ensureSprites()
 	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {
 		fmt.Println("Error:", err)
