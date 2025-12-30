@@ -13,6 +13,7 @@ import (
 	"runtime"
 	"strconv"
 	"strings"
+	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/sqweek/dialog"
@@ -24,34 +25,63 @@ type Config struct {
 	SpritePath string            `json:"sprite_path"`
 	Selections map[string]string `json:"selections"`
 }
+type progressWriter struct {
+	total     int64
+	downloaded int64
+	lastPrint int64
+}
+
+func (p *progressWriter) Write(b []byte) (int, error) {
+	n := len(b)
+	p.downloaded += int64(n)
+
+	// throttle redraws
+	if p.downloaded-p.lastPrint > p.total/100 || p.downloaded == p.total {
+		p.lastPrint = p.downloaded
+		p.print()
+	}
+	return n, nil
+}
+
+func (p *progressWriter) print() {
+	const barWidth = 40
+
+	var percent float64
+	if p.total > 0 {
+		percent = float64(p.downloaded) / float64(p.total)
+	}
+	filled := int(percent * barWidth)
+
+	fmt.Printf(
+		"\r[%-*s] %3.0f%%",
+		barWidth,
+		strings.Repeat("=", filled),
+		percent*100,
+	)
+}
+
 func ensureSprites() {
 	spritesDir := "sprites"
 	meiDir := filepath.Join(spritesDir, "mei")
+
 	if _, err := os.Stat(spritesDir); os.IsNotExist(err) {
 		log.Println("[INFO] 'sprites' folder not found, downloading ZIPs...")
 
-		// List of ZIP URLs to download
 		urls := []string{
 			"https://github.com/figamin/higurandomizer-assets/releases/download/mei1/mei_part_1.zip",
 			"https://github.com/figamin/higurandomizer-assets/releases/download/mei1/mei_part_2.zip",
 			"https://github.com/figamin/higurandomizer-assets/releases/download/mei1/mei_part_3.zip",
 		}
 
-		// Temporary folder to hold ZIPs
 		tmpDir := "tmp_sprites_download"
 		os.MkdirAll(tmpDir, os.ModePerm)
-		defer os.RemoveAll(tmpDir) // cleanup
+		defer os.RemoveAll(tmpDir)
 
 		os.MkdirAll(meiDir, os.ModePerm)
 
 		for i, url := range urls {
 			tmpFile := filepath.Join(tmpDir, "sprites_part_"+strconv.Itoa(i)+".zip")
-			log.Printf("[INFO] Downloading %s ...\n", url)
-
-			out, err := os.Create(tmpFile)
-			if err != nil {
-				log.Fatalf("Failed to create temp file: %v", err)
-			}
+			log.Printf("[INFO] Downloading %s\n", url)
 
 			resp, err := http.Get(url)
 			if err != nil {
@@ -61,9 +91,21 @@ func ensureSprites() {
 				log.Fatalf("Failed to download %s: server returned %d", url, resp.StatusCode)
 			}
 
-			_, err = io.Copy(out, resp.Body)
+			out, err := os.Create(tmpFile)
+			if err != nil {
+				log.Fatalf("Failed to create temp file: %v", err)
+			}
+
+			pw := &progressWriter{
+				total: resp.ContentLength,
+			}
+
+			_, err = io.Copy(out, io.TeeReader(resp.Body, pw))
+			fmt.Print("\n") // finish progress line
+
 			out.Close()
 			resp.Body.Close()
+
 			if err != nil {
 				log.Fatalf("Failed to save %s: %v", url, err)
 			}
@@ -72,7 +114,7 @@ func ensureSprites() {
 				log.Fatalf("Failed to extract %s: %v", tmpFile, err)
 			}
 
-			log.Printf("[INFO] Extracted %s", url)
+			log.Printf("[INFO] Extracted %s\n", url)
 		}
 
 		log.Println("[INFO] All sprites downloaded and merged successfully.")
@@ -80,6 +122,7 @@ func ensureSprites() {
 		log.Println("[INFO] 'sprites' folder exists")
 	}
 }
+
 
 // unzip extracts a ZIP file into a destination folder
 func unzip(src, dest string) error {
@@ -195,18 +238,20 @@ type menu int
 const (
 	mainMenu menu = iota
 	episodeMenu
+	manualEpisodeMenu
 	spriteMenu
 	characterMenu
 	meiVariantMenu
 	checkSelectionsMenu
+	helpMenu
 )
 
 var spriteChoices = []string{
-	"mion", "ooishi", "rena", "rika", "satoko",
-	"takano", "chie", "tomitake", "kasai", "shion",
-	"irie", "akane", "keiichi", "satoshi", "teppei",
-	"rina", "akasaka", "hanyuu", "oko", "kameda",
-	"mo", "mura", "tamura", "une",
+	"rena", "mion", "shion", "satoko", 
+	"rika", "keiichi", "hanyuu", "satoshi", "chie",
+	"ooishi", "tomitake", "takano", "irie", "kasai", 
+	"akasaka", "teppei", "akane", "rina", "oko",
+	"kameda", "mo", "mura", "tamura", "une",
 }
 
 const itemsPerPage = 5
@@ -283,13 +328,14 @@ func loadMeiOptions(charKey string) []string {
 	data, ok := Characters[charKey]
 	if !ok {
 		// fallback
-		return []string{"Best Match", "Random Outfits", "Random Outfits & Expressions"}
+		return []string{"Best Match", "Random Outfits", "Random Outfits & Expressions", "Fully Random",}
 	}
 
 	opts := []string{
 		"Best Match",
 		"Random Outfits",
 		"Random Outfits & Expressions",
+		"Fully Random",
 	}
 
 	for _, o := range data.OutfitsMei {
@@ -319,7 +365,7 @@ func initialModel() model {
 }
 
 
-func (m model) Init() tea.Cmd { return nil }
+func (m model) Init() tea.Cmd { return tea.ClearScreen }
 
 func (m *model) move(limit int, up bool) {
 	if up && m.cursor > 0 {
@@ -347,9 +393,9 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.quitting = true
 				return m, tea.Quit
 			case "up", "k":
-				m.move(6, true)
+				m.move(8, true)
 			case "down", "j":
-				m.move(6, false)
+				m.move(8, false)
 			case "enter", " ":
 				switch m.cursor {
 				case 0:
@@ -357,17 +403,24 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
     				m.cursor = int(m.selectedEpisode) - 1
     				return m, nil
 				case 1:
+					m.currentMenu = manualEpisodeMenu
+    				m.cursor = int(m.selectedEpisode) - 1
+    				return m, nil
+				case 2:
 					m.currentMenu = spriteMenu
 					m.cursor = 0
 					m.page = 0
-				case 2:
+				case 3:
 					m.currentMenu = checkSelectionsMenu
 					m.cursor = 0
-				case 3:
-					return m.randomizeSprites()
 				case 4:
-    				return m.restoreOriginalSprites()
+					return m.randomizeSprites()
 				case 5:
+    				return m.restoreOriginalSprites()
+				case 6:
+					m.currentMenu = helpMenu
+					m.cursor = 0
+				case 7:
 					m.quitting = true
 					return m, tea.Quit
 				}
@@ -391,7 +444,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if err != nil {
 			path, err = dialog.File().
 				Title("Select Higurashi executable").
-				Filter("Higurashi Episodes").
+				Filter("Higurashi0X.exe").
 				Load()
 			if err != nil {
 				m.message = "No file selected."
@@ -406,11 +459,12 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		dir := filepath.Dir(path)
 		dataFolder := filepath.Join(
 			dir,
-			strings.TrimSuffix(base, filepath.Ext(base))+"_Data",
+			strings.TrimSuffix(base, filepath.Ext(base)),
 		)
 
 		m.spritePath = filepath.Join(
 			dataFolder,
+			m.selectedEpisode.ExeName() + "_Data",
 			"StreamingAssets",
 			"CGAlt",
 			"sprite",
@@ -424,6 +478,51 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		m.message = fmt.Sprintf("Selected %s", m.selectedEpisode.Label())
 		m.currentMenu = mainMenu
+	}
+case manualEpisodeMenu:
+	switch key {
+	case "q":
+		m.currentMenu = mainMenu
+
+	case "up", "k":
+		m.move(10, true)
+
+	case "down", "j":
+		m.move(10, false)
+
+	case "enter", " ":
+		m.selectedEpisode = HigurashiEpisode(m.cursor + 1)
+
+			path, err := dialog.File().
+				Title("Select Higurashi executable").
+				Filter("Higurashi Episodes").
+				Load()
+			if err != nil {
+				m.message = "No file selected."
+				m.currentMenu = mainMenu
+				return m, nil
+			}
+
+		m.filePath = path
+		base := filepath.Base(path)
+		dir := filepath.Dir(path)
+		dataFolder := filepath.Join(dir, base[:len(base)-4]+"_Data")
+		m.spritePath = filepath.Join(dataFolder, "StreamingAssets", "CGAlt", "sprite")
+
+		saveConfig(Config{
+			GamePath:   m.filePath,
+			SpritePath: m.spritePath,
+			Selections: m.selections,
+		})
+
+		m.message = fmt.Sprintf("Selected %s", m.selectedEpisode.Label())
+		m.currentMenu = mainMenu
+	}
+case helpMenu:
+	switch key {
+	case "q", "esc", "enter":
+		m.currentMenu = mainMenu
+		m.cursor = 0
 	}
 
 		case spriteMenu:
@@ -541,7 +640,7 @@ case "Best Match":
     } else {
         variant = spriteSets[0]
     }
-case "Random Outfits", "Random Outfits & Expressions":
+case "Random Outfits", "Random Outfits & Expressions", "Fully Random":
     variant = "" 
 default:
     data := Characters[m.selectedCharacter]
@@ -608,9 +707,14 @@ func (m model) randomizeSprites() (tea.Model, tea.Cmd) {
         m.message = "Select a game first."
         return m, nil
     }
-
+	//log.Println("SPRITE PATH")
+	//log.Println(m.spritePath)
+	//log.Println("SPRITE PATH")
     spriteDir := m.spritePath
     backupDir := filepath.Join(filepath.Dir(spriteDir), "sprite_backup")
+	//log.Println("BACKUP PATH")
+	//log.Println(backupDir)
+	//log.Println("BACKUP PATH")
 
     if _, err := os.Stat(backupDir); os.IsNotExist(err) {
         log.Println("Creating backup at:", backupDir)
@@ -679,6 +783,68 @@ for key := range RawGameSprites {
             chosenVariant = spriteSets[0]
             chosenExpression = RawGameSprites[key][0]
         }
+	case "Fully Random":
+    const maxAttempts = 50
+    attempt := 0
+
+    var folders []string
+    for k := range Characters {
+        folders = append(folders, k)
+    }
+
+    if len(folders) == 0 {
+        chosenVariant = spriteSets[0]
+        chosenExpression = RawGameSprites[key][0]
+        break
+    }
+
+    for attempt < maxAttempts {
+        attempt++
+
+        randomFolder := folders[rand.Intn(len(folders))]
+        data := Characters[randomFolder]
+
+        if len(data.OutfitsMei) == 0 {
+            continue
+        }
+
+        o := data.OutfitsMei[rand.Intn(len(data.OutfitsMei))]
+        variant := o.SpriteSet
+
+        variantDir := filepath.Join("sprites", "mei", randomFolder, variant)
+        entries, err := os.ReadDir(variantDir)
+        if err != nil {
+            continue
+        }
+
+        var candidates []string
+        for _, e := range entries {
+            if !e.IsDir() && strings.HasSuffix(e.Name(), ".png") {
+                candidates = append(candidates, strings.TrimSuffix(e.Name(), ".png"))
+            }
+        }
+
+        if len(candidates) == 0 {
+            continue
+        }
+
+        expr := candidates[rand.Intn(len(candidates))]
+        src := filepath.Join("sprites", "mei", randomFolder, variant, expr+".png")
+
+        if fileExists(src) {
+            folder = randomFolder
+            chosenVariant = variant
+            chosenExpression = expr
+            break
+        }
+    }
+
+    if chosenVariant == "" || chosenExpression == "" {
+        chosenVariant = spriteSets[0]
+        chosenExpression = RawGameSprites[key][0]
+    }
+
+
     default:
         if start := strings.LastIndex(selection, "(variant: "); start != -1 {
             end := strings.Index(selection[start:], ")")
@@ -705,11 +871,14 @@ for key := range RawGameSprites {
         continue
     }
 
-    log.Printf("Replaced: %s → %s (variant: %s, expression: %s)", key, dst, chosenVariant, chosenExpression)
+    //log.Printf("Replaced: %s → %s (variant: %s, expression: %s)", key, dst, chosenVariant, chosenExpression)
 }
 
 
-    m.message = "Sprites randomized successfully."
+    m.message = fmt.Sprintf(
+    	"\nSprites randomized successfully. [%s]",
+    	time.Now().Format("15:04:05"),
+	)
     return m, nil
 }
 
@@ -752,8 +921,8 @@ func (m model) View() string {
 	switch m.currentMenu {
 	case mainMenu:
 		return fmt.Sprintf(
-			"Higurandomizer  1.0\nBy figamin\n\n%s Select Game\n%s Select Sprites\n%s Check Selections\n%s Randomize\n%s Restore Original Sprites\n%s Exit\n\n%s\n",
-			cursor(m.cursor, 0), cursor(m.cursor, 1), cursor(m.cursor, 2), cursor(m.cursor, 3), cursor(m.cursor, 4), cursor(m.cursor, 5),
+			"Higurandomizer 1.0\nBy figamin\n\n%s Auto Select Game\n%s Manually Select Game\n%s Select Sprites\n%s Check Selections\n%s Randomize\n%s Restore Original Sprites\n%s Help\n%s Exit\n\n%s\n",
+			cursor(m.cursor, 0), cursor(m.cursor, 1), cursor(m.cursor, 2), cursor(m.cursor, 3), cursor(m.cursor, 4), cursor(m.cursor, 5), cursor(m.cursor, 6), cursor(m.cursor, 7),
 			m.message,
 		)
 
@@ -793,8 +962,9 @@ func (m model) View() string {
 
 	case characterMenu:
 		return fmt.Sprintf(
-			"Character: %s\n\n%s Mei\n%s Ace Attorney\n\nUse ↑↓ Enter, q to return.\n",
-			m.selectedCharacter, cursor(m.cursor, 0), cursor(m.cursor, 1),
+			//"Character: %s\n\n%s Mei\n%s Ace Attorney\n\nUse ↑↓ Enter, q to return.\n",
+			"Character: %s\n\n%s Mei\n\nUse ↑↓ Enter, q to return.\n",
+			m.selectedCharacter, cursor(m.cursor, 0),// cursor(m.cursor, 1),
 		)
 	case meiVariantMenu:
 		if len(m.meiOptions) == 0 {
@@ -831,6 +1001,38 @@ func (m model) View() string {
 			)
 		}
 		return s + "\nUse ↑↓ Enter, q to cancel.\n"
+	case manualEpisodeMenu:
+		s := "Select Episode\n\n"
+		for i := 1; i <= 10; i++ {
+			ep := HigurashiEpisode(i)
+			s += fmt.Sprintf(
+				"%s %s\n",
+				cursor(m.cursor, i-1),
+				ep.Label(),
+			)
+		}
+		return s + "\nUse ↑↓ Enter, q to cancel.\n"
+case helpMenu:
+	return `
+This program swaps the Mangagamer Higurashi sprites with those of alternative sets, with the option to randomize the sprites. Currently only the Mei sprites are included.
+
+For now you will need 07th-Mod to use this. Later on I will add support for the vanilla game (it will just take a while because the vanilla sprite names are different)
+
+The program saves your previous settings to config.json.
+It should be able to autodetect Steam and GOG installs on Windows and Linux. If it does not work for whatever reason use the "Manually Select Game" option.
+
+In terms of the sprite options:
+
+- Best Match uses the closest sprites to the Ryukishi originals. Note that there were never Mei blinking sprites so the expressions may be more basic than the original. In the future I will try and make custom Mei sprites for certain expressions like that.
+
+- Random Outfits uses random sprites from across the Mei outfit variations for the given character, but with the same expressions as the Best Match
+
+- Random Outfits + Expresisons uses random sprites from across the Mei outfit variations for the given character.
+
+- Fully Random uses entirely random sprites from Mei. It will make zero sense.
+
+- The rest of the options change all the character sprites to a specific Mei variant. Note that there is currently no way to assign different variants to different character outfit sets (such as school vs casual vs gym), so the characters will always be wearing the same outfit if one of these options is used.
+`
 
 	case checkSelectionsMenu:
 		start := m.page * itemsPerPage
@@ -878,7 +1080,7 @@ func autodetectHigurashi(ep HigurashiEpisode) (string, error) {
 		if runtime.GOOS == "windows" {
 			exe := filepath.Join(gameDir, exeBase+".exe")
 			if fileExists(exe) {
-				return exe, nil
+				return gameDir, nil
 			}
 		}
 

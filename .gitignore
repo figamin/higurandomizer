@@ -34,3 +34,9 @@ go.work.sum
 /finality/
 /finallyold/
 menuapp
+Higurandomizer
+__debug_bin*
+/07th-Mod/
+/ace-attorney/
+/finallyold-dupes/
+/sprites_ols/
