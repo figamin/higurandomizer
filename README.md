@@ -2,7 +2,7 @@ This program swaps the Mangagamer Higurashi sprites with those of alternative se
 
 For now you will need 07th-Mod to use this. Later on I will add support for the vanilla game (it will just take a while because the vanilla sprite names are different)
 
-When the program starts up, it downloads about 4GB of sprite images. This may take a bit but it should finish soon enough.
+When the program starts up, it downloads about 4GB of sprite images. This may take a bit but it should finish soon enough. It is reccomended that you put higurandomizer in it's own folder so you can keep track of the config and scripts folder.
 The program saves your previous settings to config.json, and backs up your current sprites to "sprites_backup", with the option to restore them later.
 It should be able to autodetect Steam and GOG installs on Windows and Linux. If it does not work for whatever reason use the "Manually Select Game" option.
 
